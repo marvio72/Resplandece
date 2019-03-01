@@ -425,6 +425,7 @@ section.programa {
 div.contenedor-video {
     max-width: 100%;
     overflow-x: hidden;
+    text-align: center;
 }
 
 div.contenido-programa {
@@ -755,6 +756,7 @@ div.testimonial blockquote p::before {
 
 footer.info-testimonial {
     padding: 0;
+    background-color: transparent;
 }
 
 footer.info-testimonial img {
