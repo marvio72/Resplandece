@@ -121,9 +121,7 @@
                     <input type="email" id="email" name="email" placeholder="Tu email">                    
                 </div>
                 <div id="error"></div>
-            </div>
-        </form>
-    </section>
+            </div><!--#datos_usuario-->
 
 <!--
 .########.....###.....#######..##.....##.########.########.########..######.
@@ -183,7 +181,7 @@
           </div>
         </li>
         </ul>
-    </div>
+    </div><!--.paquetes-->
 <!--
 .########.##.....##.########.##....##.########..#######...######.
 .##.......##.....##.##.......###...##....##....##.....##.##....##
@@ -313,15 +311,15 @@
         <div class="caja clearfix">
             <div class="extras">
                 <div class="orden">
-                    <label for="playera-evento">playera del evento $135 <small>(promosión 10% dto.)</small></label>
+                    <label for="playera-evento">playera del evento $135 <small>(promoción 10% dto.)</small></label>
                     <input type="number" min="0" id="playera-evento" size="3" placeholder="0">
                 </div>
                 <div class="orden">
-                    <label for="tazas">tazas del evento $65 <small>(On Earth as it is in Heaven,Resplandece)</small></label>
+                    <label for="tazas">tazas del evento $65 <small>(On Earth,Resplandece)</small></label>
                     <input type="number" min="0" id="tazas" size="3" placeholder="0">
                 </div>
                 <div class="orden">
-                    <label for="regalo">Seleccione un regalo</label>
+                    <label for="regalo">Seleccione un regalo</label><br>
                     <select id="regalo" required>
                         <option value="">- Seleccione un regalo --</option>
                         <option value="ETI">Etiqueta</option>
@@ -345,6 +343,8 @@
             </div><!--.total-->
         </div><!--.caja-->
     </div><!--.resumen-->
+        </form>
+    </section>
     <!-- FIN DE RESUMEN -->
 <!--
 .########..#######...#######..########.########.########.
