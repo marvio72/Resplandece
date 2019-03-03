@@ -129,6 +129,7 @@ textarea {
     --color-fondoCopyright      : #2e2e2e;
     --color-fondoCaja           : #ffffff;
     --color-marcoCaja           : #e1e1e1;
+    --color-fondoResumen        : #e1e1e1;
 colo
 
 /*=================================
@@ -1046,7 +1047,7 @@ div.paquetes .tabla-precio input {
 }
 .contenido-dia {
     padding: 20px;
-    /* display: none; */
+    display: none;
 }
 @media only screen and (min-width:768px) {
     .contenido-dia > div {
@@ -1108,8 +1109,24 @@ div.resumen input {
     display: block;
     margin: 10px auto;
 }
+#lista-productos {
+    background-color: var(--color-fondoResumen);
+    padding: 20px;
+    display: none;
+}
+#suma-total {
+    /* background-color: var(--color-fondoResumen); */
+    text-align: center;
+    color: var(--color-iconos);
+    font-size: 2em;
+}
 
-
+#error {
+    clear: both;
+    padding: 20px;
+    text-align: center;
+    display: none;
+}
 
 /* ==========================================================================
    Helper classes
