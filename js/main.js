@@ -2,6 +2,28 @@
     "use strict";
     var regalo = document.getElementById('regalo');
     document.addEventListener('DOMContentLoaded', function() {
+
+/*
+ 
+ oooo     oooo                                   
+  8888o   888   ooooooo  ooooooooo     ooooooo   
+  88 888o8 88   ooooo888  888    888   ooooo888  
+  88  888  88 888    888  888    888 888    888  
+ o88o  8  o88o 88ooo88 8o 888ooo88    88ooo88 8o 
+                         o888                    
+ 
+*/    
+        var map = L.map('mapa').setView([20.653175, -103.391476], 17);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+        L.marker([20.653175, -103.391476]).addTo(map)
+        .bindPopup('Boletos ya disponibles.<br> Expo Guadalajara.')
+        .openPopup()
+        .bindTooltip('Resplandece 2019')
+        .openTooltip();
  
 /*
  
@@ -78,6 +100,7 @@
         nombre.addEventListener('blur', validarCampos);
         apellido.addEventListener('blur', validarCampos);
         email.addEventListener('blur', validarCampos);
+        email.addEventListener('blur', validarMail);
 
         function validarCampos() {
             if (this.value == '') {
@@ -88,6 +111,18 @@
             } else {
                 errorDiv.style.display = 'none';
                 this.style.border = '1px solid #cccccc';
+            }
+        }
+
+        function validarMail() {
+            if (this.value.indexOf("@") > -1) {
+                errorDiv.style.display = 'none';
+                this.style.border = '1px solid #cccccc';
+            } else {
+                errorDiv.style.display = 'block';
+                errorDiv.innerHTML = "Este campo debe tener una @";
+                this.style.border = '1px solid red';
+                errorDiv.style.border = '1px solid red';
             }
         }
 
