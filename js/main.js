@@ -1,9 +1,7 @@
-(function() {
-    "use strict";
-    var regalo = document.getElementById('regalo');
-    document.addEventListener('DOMContentLoaded', function() {
-
-/*
+$(function() { 
+    'use strict';
+ 
+    /*
  
  oooo     oooo                                   
   8888o   888   ooooooo  ooooooooo     ooooooo   
@@ -12,18 +10,28 @@
  o88o  8  o88o 88ooo88 8o 888ooo88    88ooo88 8o 
                          o888                    
  
-*/    
-        var map = L.map('mapa').setView([20.653175, -103.391476], 17);
+*/
+    var map = L.map('mapa').setView([20.653175, -103.391476], 17);
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
 
-        L.marker([20.653175, -103.391476]).addTo(map)
+    L.marker([20.653175, -103.391476]).addTo(map)
         .bindPopup('Boletos ya disponibles.<br> Expo Guadalajara.')
         .openPopup()
         .bindTooltip('Resplandece 2019')
         .openTooltip();
+ 
+});
+
+
+(function() {
+    "use strict";
+    var regalo = document.getElementById('regalo');
+    document.addEventListener('DOMContentLoaded', function() {
+
+
  
 /*
  
@@ -202,4 +210,30 @@
 
     }); //DOM CONTENT LOADED
 })();
+/*
+.########..########...#######...######...########.....###....##.....##....###...
+.##.....##.##.....##.##.....##.##....##..##.....##...##.##...###...###...##.##..
+.##.....##.##.....##.##.....##.##........##.....##..##...##..####.####..##...##.
+.########..########..##.....##.##...####.########..##.....##.##.###.##.##.....##
+.##........##...##...##.....##.##....##..##...##...#########.##.....##.#########
+.##........##....##..##.....##.##....##..##....##..##.....##.##.....##.##.....##
+.##........##.....##..#######...######...##.....##.##.....##.##.....##.##.....##
+*/
+$(function() { 
+    'use strict';
+    $('.programa-evento .info-predica:first').show();
+    
+    $('.menu-programa a:first').addClass('activo');
+    $('.menu-programa a').on('click', function() {
+        $('.menu-programa a').removeClass('activo');
+        $(this).addClass('activo');
+        $('.ocultar').hide();
+        
+        var enlace = $(this).attr('href');
+        $(enlace).fadeIn(1000);
 
+        return false;
+    })
+    
+ 
+});
