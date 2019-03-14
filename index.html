@@ -51,7 +51,9 @@
             <p class="ciudad"><i class="fas fa-map-marker-alt"></i>  Guadalajara, mx</p>
           </div><!--.clearfix-->
           <h1 class="nombre-sitio">Resplandece 2019</h1>
-          <p class="slogan">El evento más <span>esperado del año</span></p>
+          <div class="cuadro-slogan">
+            <p class="slogan">El evento más <span>esperado del año</span></p>
+          </div>
         </div><!--informacion-evento-->
         
       </div><!--.contenido-header-->
@@ -406,10 +408,10 @@
     <h2>Faltan</h2>
     <div class="cuenta-regresiva contenedor">
       <ul class="clearfix">
-        <li><p class="numero">80</p> días</li>
-        <li><p class="numero">15</p> horas</li>
-        <li><p class="numero">5</p> minutos</li>
-        <li><p class="numero">30</p> segundos</li>
+        <li><p id="dias" class="numero"></p> días</li>
+        <li><p id="horas" class="numero"></p> horas</li>
+        <li><p id="minutos" class="numero"></p> minutos</li>
+        <li><p id="segundos" class="numero"></p> segundos</li>
 
       </ul>
     </div> 
@@ -460,7 +462,9 @@
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
   <script src="js/plugins.js"></script>
   <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+  <script src="js/jquery.lettering.js"></script>
   <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/jquery.countdown.min.js"></script>
   <script src="js/main.js"></script>
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->

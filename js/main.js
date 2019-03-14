@@ -210,17 +210,21 @@ $(function() {
 
     }); //DOM CONTENT LOADED
 })();
-/*
-.########..########...#######...######...########.....###....##.....##....###...
-.##.....##.##.....##.##.....##.##....##..##.....##...##.##...###...###...##.##..
-.##.....##.##.....##.##.....##.##........##.....##..##...##..####.####..##...##.
-.########..########..##.....##.##...####.########..##.....##.##.###.##.##.....##
-.##........##...##...##.....##.##....##..##...##...#########.##.....##.#########
-.##........##....##..##.....##.##....##..##....##..##.....##.##.....##.##.....##
-.##........##.....##..#######...######...##.....##.##.....##.##.....##.##.....##
-*/
+
 $(function() { 
     'use strict';
+/*
+ 
+ ooooo                     o8     o8                         o88                           
+  888         ooooooooo8 o888oo o888oo ooooooooo8 oo oooooo  oooo  oo oooooo     oooooooo8 
+  888        888oooooo8   888    888  888oooooo8   888    888 888   888   888  888    88o  
+  888      o 888          888    888  888          888        888   888   888   888oo888o  
+ o888ooooo88   88oooo888   888o   888o  88oooo888 o888o      o888o o888o o888o 888     888 
+                                                                                888ooo888  
+ 
+*/
+    $('.nombre-sitio').lettering();
+
 /*
  
    oooooooo8                          o888o                                                         o88                          
@@ -260,5 +264,21 @@ $(function() {
     $('.resumen-evento li:nth-child(3) p').animateNumber({number: 3}, 1600);
     $('.resumen-evento li:nth-child(4) p').animateNumber({number: 2}, 1600);
       
+/*
  
+        oooooooo8                                    o8                   oooooooooo                                                            o88                        
+      o888     88 oooo  oooo  ooooooooo8 oo oooooo o888oo  ooooooo         888    888 ooooooooo8   oooooooo8 oo oooooo    ooooooooo8  oooooooo8 oooo oooo   oooo ooooooo   
+      888          888   888 888oooooo8   888   888 888    ooooo888        888oooo88 888oooooo8  888    88o   888    888 888oooooo8  888ooooooo  888  888   888  ooooo888  
+      888o     oo  888   888 888          888   888 888  888    888        888  88o  888          888oo888o   888        888                 888 888   888 888 888    888  
+       888oooo88    888o88 8o  88oooo888 o888o o888o 888o 88ooo88 8o      o888o  88o8  88oooo888 888     888 o888o         88oooo888 88oooooo88 o888o    888    88ooo88 8o 
+                                                                                                  888ooo888                                                                
+ 
+*/   
+ 
+    $('.cuenta-regresiva').countdown('2019/08/01 10:00:00', function(event){
+        $('#dias').html(event.strftime('%D'));
+        $('#horas').html(event.strftime('%H'));
+        $('#minutos').html(event.strftime('%M'));
+        $('#segundos').html(event.strftime('%S'));
+    });
 });
