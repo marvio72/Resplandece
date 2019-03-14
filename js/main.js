@@ -221,6 +221,16 @@ $(function() {
 */
 $(function() { 
     'use strict';
+/*
+ 
+   oooooooo8                          o888o                                                         o88                          
+ o888     88   ooooooo  oo oooooo   o888oo ooooooooo8 oo oooooo    ooooooooo8 oo oooooo    ooooooo  oooo   ooooooo    oooooooo8  
+ 888         888     888 888   888   888  888oooooo8   888    888 888oooooo8   888   888 888     888 888   ooooo888  888ooooooo  
+ 888o     oo 888     888 888   888   888  888          888        888          888   888 888         888 888    888          888 
+  888oooo88    88ooo88  o888o o888o o888o   88oooo888 o888o         88oooo888 o888o o888o  88ooo888 o888o 88ooo88 8o 88oooooo88  
+                                                                                                                                 
+ 
+*/
     $('.programa-evento .info-predica:first').show();
     
     $('.menu-programa a:first').addClass('activo');
@@ -233,7 +243,22 @@ $(function() {
         $(enlace).fadeIn(1000);
 
         return false;
-    })
-    
+    });
+
+/*
+ 
+      o                  o88                                      o88                              oooo   oooo                                                                         
+     888     oo oooooo   oooo  oo ooo oooo    ooooooo    ooooooo  oooo   ooooooo  oo oooooo         8888o  88 oooo  oooo  oo ooo oooo   ooooooooo8 oo oooooo     ooooooo    oooooooo8  
+    8  88     888   888   888   888 888 888   ooooo888 888     888 888 888     888 888   888        88 888o88  888   888   888 888 888 888oooooo8   888    888 888     888 888ooooooo  
+   8oooo88    888   888   888   888 888 888 888    888 888         888 888     888 888   888        88   8888  888   888   888 888 888 888          888        888     888         888 
+ o88o  o888o o888o o888o o888o o888o888o888o 88ooo88 8o  88ooo888 o888o  88ooo88  o888o o888o      o88o    88   888o88 8o o888o888o888o  88oooo888 o888o         88ooo88   88oooooo88  
+                                                                                                                                                                                       
+ 
+*/
+    $('.resumen-evento li:nth-child(1) p').animateNumber({number: 6}, 1200);
+    $('.resumen-evento li:nth-child(2) p').animateNumber({number: 15}, 800);
+    $('.resumen-evento li:nth-child(3) p').animateNumber({number: 3}, 1600);
+    $('.resumen-evento li:nth-child(4) p').animateNumber({number: 2}, 1600);
+      
  
 });
