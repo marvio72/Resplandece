@@ -11,18 +11,19 @@ $(function() {
                          o888                    
  
 */
-    var map = L.map('mapa').setView([20.653175, -103.391476], 17);
+    if (document.getElementById('mapa')) {
+        var map = L.map('mapa').setView([20.653175, -103.391476], 17);
 
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
 
-    L.marker([20.653175, -103.391476]).addTo(map)
-        .bindPopup('Boletos ya disponibles.<br> Expo Guadalajara.')
-        .openPopup()
-        .bindTooltip('Resplandece 2019')
-        .openTooltip();
- 
+        L.marker([20.653175, -103.391476]).addTo(map)
+            .bindPopup('Boletos ya disponibles.<br> Expo Guadalajara.')
+            .openPopup()
+            .bindTooltip('Resplandece 2019')
+            .openTooltip();
+    }
 });
 
 
@@ -99,6 +100,9 @@ $(function() {
                                                                                   
  
 */
+        if(document.getElementById('calcular')) {
+
+        
         calcular.addEventListener('click', calcularMontos);         
 
         pase_dia.addEventListener('change', mostrarDias);
@@ -207,7 +211,7 @@ $(function() {
             }
             
         }
-
+    }
     }); //DOM CONTENT LOADED
 })();
 
@@ -225,6 +229,53 @@ $(function() {
 */
     $('.nombre-sitio').lettering();
 
+/*
+ 
+ oooo     oooo                                         o888o o88   o88                  
+  8888o   888  ooooooooo8 oo oooooo oooo  oooo       o888oo  oooo oooo   ooooooo        
+  88 888o8 88 888oooooo8   888   888 888   888        888     888  888 888     888      
+  88  888  88 888          888   888 888   888        888     888  888 888     888      
+ o88o  8  o88o  88oooo888 o888o o888o 888o88 8o      o888o   o888o 888   88ooo88        
+                                                                  o88                   
+ 
+*/   
+    var windowHeight = $(window).height();
+    var barraAltura = $('.barra').innerHeight();
+
+    $(window).scroll(function(){
+        var scroll = $(window).scrollTop();
+        if(scroll > windowHeight) {
+            $('.barra').addClass('fixed');
+            $('body').css({'margin-top': barraAltura+'px'});
+        } else {
+            $('.barra').removeClass('fixed');
+            $('body').css({'margin-top': '0px'});
+        }
+    });
+
+/*
+ 
+ oooo     oooo                                       oooooooooo                                                                      o88                                   
+  8888o   888  ooooooooo8 oo oooooo oooo  oooo        888    888 ooooooooo8  oooooooo8 ooooooooo     ooooooo  oo oooooo    oooooooo8 oooo oooo   oooo  ooooooo             
+  88 888o8 88 888oooooo8   888   888 888   888        888oooo88 888oooooo8  888ooooooo  888    888 888     888 888   888  888ooooooo  888  888   888 888     888           
+  88  888  88 888          888   888 888   888        888  88o  888                 888 888    888 888     888 888   888          888 888   888 888  888     888           
+ o88o  8  o88o  88oooo888 o888o o888o 888o88 8o      o888o  88o8  88oooo888 88oooooo88  888ooo88     88ooo88  o888o o888o 88oooooo88 o888o    888      88ooo88             
+                                                                                       o888                                                                                
+ 
+*/  
+
+    $('.menu-movil').on('click', function() {
+        $('.navegacion-principal').slideToggle();
+    });
+
+    var breakpoint = 768;
+    $(window).resize(function(){
+        if ($(document).width() >= breakpoint) {
+            $('.navegacion-principal').show();
+        }else {
+            $('.navegacion-principal').hide();
+        }
+    });
 /*
  
    oooooooo8                          o888o                                                         o88                          
@@ -259,10 +310,11 @@ $(function() {
                                                                                                                                                                                        
  
 */
-    $('.resumen-evento li:nth-child(1) p').animateNumber({number: 6}, 1200);
-    $('.resumen-evento li:nth-child(2) p').animateNumber({number: 15}, 800);
-    $('.resumen-evento li:nth-child(3) p').animateNumber({number: 3}, 1600);
-    $('.resumen-evento li:nth-child(4) p').animateNumber({number: 2}, 1600);
+    
+        $('.resumen-evento li:nth-child(1) p').animateNumber({number: 6}, 1200);
+        $('.resumen-evento li:nth-child(2) p').animateNumber({number: 15}, 800);
+        $('.resumen-evento li:nth-child(3) p').animateNumber({number: 3}, 1600);
+        $('.resumen-evento li:nth-child(4) p').animateNumber({number: 2}, 1600);
       
 /*
  

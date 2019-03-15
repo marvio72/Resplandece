@@ -442,16 +442,24 @@ p.slogan span{
 */
 div.barra {
     background-color: var(--color-barra);
-    padding: 20px 0;
- /*   height: 120px;*/
+    padding: 0;
+}
+.fixed {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
 }
 div.logo {
     width: 20%;
-    margin: 0 auto;
+    margin: 5px auto;
     float: left;
+    text-align: center;
 }
 div.logo img {
-    width: 100%;
+    width: 60px;
+    display: inline-block;
 }
 @media only screen and (min-width:768px){
     div.logo {
@@ -471,6 +479,7 @@ div.logo img {
 */
 nav.navegacion-principal {
     display: none;
+    width: 100%;
 }
 nav.navegacion-principal a{
     color           : var(--color-menu);
@@ -507,7 +516,7 @@ nav.navegacion-principal a:last-child:hover{
     nav.navegacion-principal a {
         display      : inline-block;
         margin-right: 10px;
-        padding      : 20px 10px;
+        padding      : 10px 10px;
         width: auto;
     }
 
