@@ -310,11 +310,18 @@ $(function() {
                                                                                                                                                                                        
  
 */
-    
-        $('.resumen-evento li:nth-child(1) p').animateNumber({number: 6}, 1200);
-        $('.resumen-evento li:nth-child(2) p').animateNumber({number: 15}, 800);
-        $('.resumen-evento li:nth-child(3) p').animateNumber({number: 3}, 1600);
-        $('.resumen-evento li:nth-child(4) p').animateNumber({number: 2}, 1600);
+        var resumenLista = $('.resumen-evento');
+        if (resumenLista.length > 0) {
+            $('.resumen-evento').waypoint(function() {
+                $('.resumen-evento li:nth-child(1) p').animateNumber({number: 6}, 1200);
+                $('.resumen-evento li:nth-child(2) p').animateNumber({number: 15}, 800);
+                $('.resumen-evento li:nth-child(3) p').animateNumber({number: 3}, 1600);
+                $('.resumen-evento li:nth-child(4) p').animateNumber({number: 2}, 1600);
+            },{
+                offset: '50%'
+            });
+        }
+        
       
 /*
  
