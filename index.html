@@ -15,6 +15,8 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Open+Sans|Oswald|PT+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" />
+  
   <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -49,7 +51,9 @@
             <p class="ciudad"><i class="fas fa-map-marker-alt"></i>  Guadalajara, mx</p>
           </div><!--.clearfix-->
           <h1 class="nombre-sitio">Resplandece 2019</h1>
-          <p class="slogan">El evento más <span>esperado del año</span></p>
+          <div class="cuadro-slogan">
+            <p class="slogan">El evento más <span>esperado del año</span></p>
+          </div>
         </div><!--informacion-evento-->
         
       </div><!--.contenido-header-->
@@ -65,11 +69,12 @@
 .##.....##.##.....##.##....##..##....##..##.....##....##.....##.##.......##...###.##.....##
 .########..##.....##.##.....##.##.....##.##.....##....##.....##.########.##....##..#######.
 -->
-  <div class="barra">
-    <div class="contenedor clearfix">
-      <div class="logo">
-        <img src="img/resplandece/Palabra de Fe y Gracia blanco.svg">
-      </div><!--.logo-->
+      <div class="barra">
+        <div class="contenedor clearfix">
+          <div class="logo">
+            <img src="img/resplandece/Palabra de Fe y Gracia blanco.svg">
+          </div>
+          <!--.logo-->
 
       <div class="menu-movil">
         <span></span>
@@ -78,7 +83,7 @@
       </div><!--.menu-movil-->
 
       <nav class="navegacion-principal clearfix">
-        <a href="#">conferencia</a>
+        <a href="conferencia.html">conferencia</a>
         <a href="#">calendario</a>
         <a href="#">predicadores</a>
         <a href="registro.html">reservaciones</a>
@@ -123,26 +128,62 @@
         <div class="programa-evento">
             <h2>Programa del Congreso</h2>
             <nav class="menu-programa">
-              <a href="#"><i class="fas fa-bible"></i> Predicaciones</a>
-              <a href="#"><i class="fas fa-praying-hands"></i> Alabanza y Adoración</a>
-              <a href="#"><i class="fas fa-music"></i> Concierto</a>  
+              <a href="#predicaciones"><i class="fas fa-bible"></i> Predicaciones</a>
+              <a href="#alabanza"><i class="fas fa-praying-hands"></i> Alabanza y Adoración</a>
+              <a href="#concierto"><i class="fas fa-music"></i> Concierto</a>  
             </nav>
 
-            <div id="predicacion" class="info-predica oculta clearfix">
+            <div id="predicaciones" class="info-predica ocultar clearfix">
               <div class="detalle-evento">
                 <h3>La misión del Cristiano</h3>
-                <p><i class="far fa-clock"></i> 9:00 hrs</p>
-                <p><i class="far fa-calendar-alt"></i> 3 de Ago</p>
+                <p><i class="far fa-clock"></i> 9:30 hrs</p>
+                <p><i class="far fa-calendar-alt"></i> 1 de Ago</p>
                 <p><i class="far fa-user"></i> Cash Luna</p>
               </div><!--detalle-evento-->
               <div class="detalle-evento">
                 <h3>Como hacer crecer tu fe</h3>
-                <p><i class="far fa-clock"></i> 10:00 hrs</p>
-                <p><i class="far fa-calendar-alt"></i> 3 de Ago</p>
+                <p><i class="far fa-clock"></i> 10:30 hrs</p>
+                <p><i class="far fa-calendar-alt"></i> 1 de Ago</p>
                 <p><i class="far fa-user"></i> Robert Morris</p>
               </div><!--detalle-evento-->
               <a href="#" class="button float-right">Ver todos</a>
             </div><!--#predicacion-->
+            <div id="alabanza" class="info-predica ocultar clearfix">
+              <div class="detalle-evento">
+                <h3>Alabanza y adoración</h3>
+                <p><i class="far fa-clock"></i> 9:00 hrs</p>
+                <p><i class="far fa-calendar-alt"></i> 1 de Ago</p>
+                <p><i class="far fa-user"></i> Fe y Gracia</p>
+              </div>
+              <!--detalle-evento-->
+              <div class="detalle-evento">
+                <h3>Alabanza y adoración</h3>
+                <p><i class="far fa-clock"></i> 16:00 hrs</p>
+                <p><i class="far fa-calendar-alt"></i> 1 de Ago</p>
+                <p><i class="far fa-user"></i> Conquista</p>
+              </div>
+              <!--detalle-evento-->
+              <a href="#" class="button float-right">Ver todos</a>
+            </div>
+            <!--#alabanza-->
+            <div id="concierto" class="info-predica ocultar clearfix">
+              <div class="detalle-evento">
+                <h3>Alabar al Supremo</h3>
+                <p><i class="far fa-clock"></i> 20:00 hrs</p>
+                <p><i class="far fa-calendar-alt"></i> 1 de Ago</p>
+                <p><i class="far fa-user"></i> Fe y Gracia</p>
+              </div>
+              <!--detalle-evento-->
+              <div class="detalle-evento">
+                <h3>Tu eres suficiente</h3>
+                <p><i class="far fa-clock"></i> 21:00 hrs</p>
+                <p><i class="far fa-calendar-alt"></i> 1 de Ago</p>
+                <p><i class="far fa-user"></i> Grupo Marco Espinoza</p>
+              </div>
+              <!--detalle-evento-->
+              <a href="#" class="button float-right">Ver todos</a>
+            </div>
+            <!--#concierto-->
         </div><!--.contenido-programa-->
       </div><!--.contenedor-->     
     </div><!---.programa-evento-->
@@ -217,10 +258,10 @@
   <section class="contador parallax">
     <div class="contenedor">
       <ul class="resumen-evento clearfix">
-        <li><p class="numero">6</p>Invitados</li>
-        <li><p class="numero">15</p>Predicaciones</li>
-        <li><p class="numero">3</p>Días</li>
-        <li><p class="numero">2</p>ConciertoS</li>
+        <li><p class="numero">0</p>Invitados</li>
+        <li><p class="numero">0</p>Predicaciones</li>
+        <li><p class="numero">0</p>Días</li>
+        <li><p class="numero">0</p>ConciertoS</li>
       </ul>
     </div>
   </section>
@@ -368,10 +409,10 @@
     <h2>Faltan</h2>
     <div class="cuenta-regresiva contenedor">
       <ul class="clearfix">
-        <li><p class="numero">80</p> días</li>
-        <li><p class="numero">15</p> horas</li>
-        <li><p class="numero">5</p> minutos</li>
-        <li><p class="numero">30</p> segundos</li>
+        <li><p id="dias" class="numero"></p> días</li>
+        <li><p id="horas" class="numero"></p> horas</li>
+        <li><p id="minutos" class="numero"></p> minutos</li>
+        <li><p id="segundos" class="numero"></p> segundos</li>
 
       </ul>
     </div> 
@@ -421,6 +462,11 @@
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
   <script src="js/plugins.js"></script>
+  <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+  <script src="js/jquery.lettering.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.countdown.min.js"></script>
   <script src="js/main.js"></script>
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
