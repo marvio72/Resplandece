@@ -39,7 +39,7 @@
             <nav class="menu-programa">
               <a href="#predicaciones"><i class="fas fa-bible"></i> Predicaciones</a>
               <a href="#alabanza"><i class="fas fa-praying-hands"></i> Alabanza y Adoración</a>
-              <a href="#concierto"><i class="fas fa-music"></i> Concierto</a>  
+              <a href="#conciertos"><i class="fas fa-music"></i> Conciertos</a>  
             </nav>
 
             <div id="predicaciones" class="info-predica ocultar clearfix">
