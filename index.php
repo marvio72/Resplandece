@@ -107,53 +107,8 @@
 ..##..##...###...##.##....##.....##....##.....##.##.....##.##.....##.##....##
 .####.##....##....###....####....##....##.....##.########...#######...######.
 -->
-  <section class="invitados contenedor seccion">
-    <h2>Nuestros Invitados</h2>
-    <ul class="lista-invitados clearfix">
-      <li>
-        <div class="invitado">
-          <img src="img/conferencias/invitado1.jpg" alt="Imagen Invitado"
-          >
-          <p>Richard Hays</p>
-        </div>
-      </li>
-      <li>
-        <div class="invitado">
-          <img src="img/conferencias/invitado2.jpg" alt="Imagen Invitado"
-          >
-          <p>Honda Hays</p>
-        </div>
-      </li>
-      <li>
-        <div class="invitado">
-          <img src="img/conferencias/invitado3.jpg" alt="Imagen Invitado"
-          >
-          <p>Daniel Alvarez</p>
-        </div>
-      </li>
-      <li>
-        <div class="invitado">
-          <img src="img/conferencias/invitado4.jpg" alt="Imagen Invitado"
-          >
-          <p>Marcela Espinoza</p>
-        </div>
-      </li>
-      <li>
-        <div class="invitado">
-          <img src="img/conferencias/invitado5.jpg" alt="Imagen Invitado"
-          >
-          <p>Fabricio Gómez</p>
-        </div>
-      </li>
-      <li>
-        <div class="invitado">
-          <img src="img/conferencias/invitado6.jpg" alt="Imagen Invitado"
-          >
-          <p>Isabel Ruvalcaba</p>
-        </div>
-      </li>
-    </ul>
-  </section><!--FIN SECCION INVITADOS-->
+
+  <?php include_once 'includes/templates/invitados.php'; ?>
 
 <!--
 ..######...#######..##....##.########....###....########...#######..########.

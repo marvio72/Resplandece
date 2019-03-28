@@ -44,10 +44,12 @@ $(function() {
                                                                                                                                               
  
 */
+
         let nombre   = document.getElementById('nombre');
         let apellido = document.getElementById('apellido');
         let email    = document.getElementById('email');
-  /*
+
+/*
  
  oooooooooo                                                       oooooooo8                                                              
   888    888 ooooooo    oooooooo8   ooooooooo8  oooooooo8       o888     88   ooooooo   oo ooo oooo  ooooooooo     ooooooo    oooooooo8  
@@ -340,4 +342,18 @@ $(function() {
         $('#minutos').html(event.strftime('%M'));
         $('#segundos').html(event.strftime('%S'));
     });
+
+/*
+ 
+   oooooooo8            o888                       oooo                              
+ o888     88   ooooooo   888   ooooooo  oo oooooo   888ooooo     ooooooo oooo   oooo 
+ 888         888     888 888 888     888 888    888 888    888 888     888 888o888   
+ 888o     oo 888     888 888 888     888 888        888    888 888     888 o88 88o   
+  888oooo88    88ooo88  o888o  88ooo88  o888o      o888ooo88     88ooo88 o88o   o88o 
+                                                                                     
+ 
+*/
+    if(document.getElementById('inv_colorbox')) {
+        $('.invitado-info').colorbox({inline:true, width:"50%"});
+    }
 });

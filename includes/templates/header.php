@@ -14,7 +14,17 @@
 
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/lightbox.css">
+    <?php
+        $archivo = basename($_SERVER['PHP_SELF']);
+        $pagina = str_replace(".php", '', $archivo);
+        if ($pagina == 'invitados' || $pagina == 'index') {
+            echo '<link rel="stylesheet" href="css/colorbox.css">';
+        } elseif ($pagina == 'conferencia') {
+            echo '<link rel="stylesheet" href="css/lightbox.css">';
+        }
+    ?>
+
+
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Open+Sans|Oswald|PT+Sans" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" />
 
@@ -48,7 +58,7 @@
                 </nav>
                 <div class="informacion-evento">
                     <div class="clearfix">
-                        <p class="fecha"><i class="far fa-calendar-alt"></i> 05-07 Ago</p>
+                        <p class="fecha"><i class="far fa-calendar-alt"></i> 01-03 Ago</p>
                         <p class="ciudad"><i class="fas fa-map-marker-alt"></i> Guadalajara, mx</p>
                     </div>
                     <!--.clearfix-->
@@ -93,10 +103,10 @@
             <nav class="navegacion-principal clearfix">
                 <a href="conferencia.php">conferencia</a>
                 <a href="calendario.php">calendario</a>
-                <a href="invitados.php">predicadores</a>
+                <a href="invitados.php">Invitados</a>
                 <a href="registro.php">reservaciones</a>
             </nav>
         </div>
         <!--.contenedor-->
     </div>
-    <!--.barra--> 
+    <!--. bar ra-->
