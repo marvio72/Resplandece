@@ -93,7 +93,7 @@
             <nav class="navegacion-principal clearfix">
                 <a href="conferencia.php">conferencia</a>
                 <a href="calendario.php">calendario</a>
-                <a href="#">predicadores</a>
+                <a href="invitados.php">predicadores</a>
                 <a href="registro.php">reservaciones</a>
             </nav>
         </div>
