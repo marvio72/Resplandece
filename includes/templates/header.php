@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body>
+<body class="<?php echo $pagina; ?>">
     <!--[if lte IE 9]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
@@ -101,10 +101,10 @@
             <!--.menu-movil-->
 
             <nav class="navegacion-principal clearfix">
-                <a href="conferencia.php">conferencia</a>
-                <a href="calendario.php">calendario</a>
+                <a href="conferencia.php">Conferencia</a>
+                <a href="calendario.php">Calendario</a>
                 <a href="invitados.php">Invitados</a>
-                <a href="registro.php">reservaciones</a>
+                <a href="registro.php">Reservaciones</a>
             </nav>
         </div>
         <!--.contenedor-->

@@ -233,6 +233,21 @@ $(function() {
 
 /*
  
+ oooo     oooo                                       oooooooooo                        o88                                    o                 o8                          o888  
+  8888o   888  ooooooooo8 oo oooooo oooo  oooo        888    888 ooooooo     oooooooo8 oooo  oo oooooo    ooooooo            888     ooooooo  o888oo oooo  oooo   ooooooo    888  
+  88 888o8 88 888oooooo8   888   888 888   888        888oooo88  ooooo888  888    88o   888   888   888   ooooo888          8  88  888     888 888    888   888   ooooo888   888  
+  88  888  88 888          888   888 888   888        888      888    888   888oo888o   888   888   888 888    888         8oooo88 888         888    888   888 888    888   888  
+ o88o  8  o88o  88oooo888 o888o o888o 888o88 8o      o888o      88ooo88 8o 888     888 o888o o888o o888o 88ooo88 8o      o88o  o888o 88ooo888   888o   888o88 8o 88ooo88 8o o888o 
+                                                                            888ooo888                                                                                             
+ 
+*/
+
+    $('body.conferencia .navegacion-principal a:contains("Conferencia")').addClass('activo');
+    $('body.calendario .navegacion-principal a:contains("Calendario")').addClass('activo');
+    $('body.invitados .navegacion-principal a:contains("Invitados")').addClass('activo');
+
+/*
+ 
  oooo     oooo                                         o888o o88   o88                  
   8888o   888  ooooooooo8 oo oooooo oooo  oooo       o888oo  oooo oooo   ooooooo        
   88 888o8 88 888oooooo8   888   888 888   888        888     888  888 888     888      
