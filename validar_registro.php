@@ -12,7 +12,7 @@ include_once 'includes/funciones/funciones.php';
         $email    = $_POST['email'];
         $regalo   = $_POST['regalo'];
         $total    = $_POST['total_pedido'];
-        $fecha    = date('Y-m-d H: i: s');
+        $fecha    = date('Y-m-d H:i:s');
 
         // Pedidos
         $boletos  = $_POST['boletos'];
@@ -22,24 +22,24 @@ include_once 'includes/funciones/funciones.php';
         // var_dump($pedido);
 
         // Eventos
-        $evento_existente = false;
-        $registro = '';
-        if (isset($_POST['registro'])) :
-            $eventos = $_POST['registro'];
-            $registro = eventos_json($eventos);
-            $evento_existente = true;
-        endif;
+        $eventos = $_POST['registro'];
+        $registro = eventos_json($eventos);
 
+        try {
+            require_once('includes/funciones/bd_conexion.php');
+            $stmt = $conn->prepare("INSERT INTO registrados (nombre_registrado, apellido_registrado, email_registrado, fecha_registro, pases_articulos, talleres_registrados, regalo, total_pagado) VALUES (?,?,?,?,?,?,?,?) ");
+            $stmt->bind_param("ssssssis", $nombre, $apellido, $email, $fecha, $pedido, $registro, $regalo, $total);
+            $stmt->execute();
+            var_dump($stmt);
+            $stmt->close();
+            $conn->close();
+        } catch (Exception $e) {
+            $error = $e->getMessage();
+        }
 
         ?>
     <?php
-    echo $pedido;
-    echo "<hr>";
-    if ($evento_existente == true){
-        echo $registro;
-    } else {
-        echo 'no hay eventos seleccionados';
-    }
+
     ?>
 
     <?php endif; ?>
@@ -48,4 +48,4 @@ include_once 'includes/funciones/funciones.php';
 </section>
 
 
-<?php include_once 'includes/templates/footer.php'; ?> 
+<?php include_once 'includes/templates/footer.php'; ?>
