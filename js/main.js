@@ -92,6 +92,8 @@ $(function() {
         let playeras = document.getElementById('playera_evento');
         let tazas    = document.getElementById('tazas');
 
+        botonRegistro.disabled = true;
+
 /*
  
    oooooooo8             o888                        o888                         
@@ -180,6 +182,8 @@ $(function() {
                 }
 
                 suma_total.innerHTML = `\$ ${totalPagar.toFixed(2)}`;
+                botonRegistro.disabled = false;
+                document.getElementById('total_pedido').value = totalPagar;
             }
         }
 

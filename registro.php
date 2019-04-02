@@ -23,7 +23,7 @@
 -->
 <section class="seccion contenedor">
     <h2>Registro de Usuarios</h2>
-    <form action="index.html" id="registro" class="registro" method="POST">
+    <form action="validar_registro.php" id="registro" class="registro" method="POST">
         <div id="datos_usuario" class="registro caja clearfix">
             <div class="campo">
                 <label for="nombre">Nombre:</label>
@@ -64,7 +64,7 @@
                         </ul>
                         <div class="orden">
                             <label for="pase_dia">Boletos deseados:</label>
-                            <input type="number" id="pase_dia" min="0" size="3" placeholder="0">
+                            <input type="number" id="pase_dia" min="0" size="3" name="boletos[]" placeholder="0">
                         </div>
                     </div>
                 </li>
@@ -79,7 +79,7 @@
                         </ul>
                         <div class="orden">
                             <label for="pase_completo">Boletos deseados:</label>
-                            <input type="number" id="pase_completo" min="0" size="3" placeholder="0">
+                            <input type="number" id="pase_completo" min="0" size="3" name="boletos[]" placeholder="0">
                         </div>
                     </div>
                 </li>
@@ -94,7 +94,7 @@
                         </ul>
                         <div class="orden">
                             <label for="pase_dosdias">Boletos deseados:</label>
-                            <input type="number" id="pase_dosdias" min="0" size="3" placeholder="0">
+                            <input type="number" id="pase_dosdias" min="0" size="3" name="boletos[]" placeholder="0">
                         </div>
                     </div>
                 </li>
@@ -231,19 +231,19 @@
                 <div class="extras">
                     <div class="orden">
                         <label for="playera-evento">playera del evento $150 <small>(promoción 10% dto.)</small></label>
-                        <input type="number" min="0" id="playera_evento" size="3" placeholder="0">
+                        <input type="number" min="0" id="playera_evento" size="3"  name="pedido_playeras" placeholder="0">
                     </div>
                     <div class="orden">
                         <label for="tazas">tazas del evento $65 <small>(On Earth,Resplandece)</small></label>
-                        <input type="number" min="0" id="tazas" size="3" placeholder="0">
+                        <input type="number" min="0" id="tazas" size="3" name="pedido_tazas" placeholder="0">
                     </div>
                     <div class="orden">
                         <label for="regalo">Seleccione un regalo</label><br>
-                        <select id="regalo" required>
+                        <select id="regalo" name="regalo" required>
                             <option value="">- Seleccione un regalo --</option>
-                            <option value="ETI">Etiqueta</option>
-                            <option value="PUL">Pulsera</option>
-                            <option value="PLU">Pluma</option>
+                            <option value="2">Etiqueta</option>
+                            <option value="1">Pulsera</option>
+                            <option value="3">Pluma</option>
                         </select>
                     </div>
                     <!--.orden-->
@@ -261,7 +261,8 @@
 
                     </div>
                     <!--#suma-total-->
-                    <input type="submit" id="btnRegistro" class="button" value="Pagar">
+                    <input type="hidden" name="total_pedido" id="total_pedido">
+                    <input type="submit" id="btnRegistro" class="button" name="sumit" value="Pagar">
 
                 </div>
                 <!--.total-->
