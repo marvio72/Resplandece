@@ -262,7 +262,7 @@
                     </div>
                     <!--#suma-total-->
                     <input type="hidden" name="total_pedido" id="total_pedido">
-                    <input type="submit" id="btnRegistro" class="button" name="sumit" value="Pagar">
+                    <input type="submit" id="btnRegistro" class="button" name="submit" value="Pagar">
 
                 </div>
                 <!--.total-->
