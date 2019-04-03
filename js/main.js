@@ -372,7 +372,6 @@ $(function() {
                                                                                      
  
 */
-    if(document.getElementById('inv_colorbox')) {
-        $('.invitado-info').colorbox({inline:true, width:"50%"});
-    }
+    $('.invitado-info').colorbox({inline: true, width: "50%"});
+    $('.boton_newsletter').colorbox({ inline: true, width: "50%" });
 });

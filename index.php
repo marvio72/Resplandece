@@ -107,12 +107,12 @@
                         <p><i class="far fa-calendar-alt"></i><?php echo $evento['fecha_evento']; ?></p>
                         <p><i class="far fa-user"></i> <?php echo $evento['nombre']; ?></p>
                     </div>
-                
 
-                    <?php if($i % 2 == 1) : ?>
-                        <a href="calendario.php" class="button float-right">Ver todos</a>
-                    </div> <!-- predicaciones -->
-                    <?php endif; ?>
+
+                    <?php if ($i % 2 == 1) : ?>
+                    <a href="calendario.php" class="button float-right">Ver todos</a>
+                </div> <!-- predicaciones -->
+                <?php endif; ?>
                 <?php $i++; ?>
                 <?php endforeach; ?>
                 <?php $resultado->free(); ?>
@@ -295,7 +295,7 @@
     <div class="contenido contenedor">
         <p>regístrate al newsletter:</p>
         <h3>Resplandece</h3>
-        <a href="#" class="button transparente">registro</a>
+        <a href="#mc_embed_signup" class="boton_newsletter button transparente">registro</a>
     </div>
 </div>
 <!-- FIN NEWSLETTER -->
